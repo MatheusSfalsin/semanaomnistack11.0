@@ -12,14 +12,10 @@ import logoImg from '../../assets/logo.svg';
 export default function Logon() { // Props são as propriedades chamadas qunado for usada
     const [id, setId] = useState('');
 
-
     const history = useHistory() // para navegação - redirecionamento
 
     async function handleLogin(e) {
         e.preventDefault() // previnir comportamento padrão de recarregamento de pagina
-
-
-
         try {
             const response = await api.post('sessions', { id })
             
